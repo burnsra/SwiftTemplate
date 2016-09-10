@@ -13,7 +13,21 @@
 		00FB62991D83167700E40F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62981D83167700E40F9D /* AppDelegate.swift */; };
 		00FB629B1D83167700E40F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629A1D83167700E40F9D /* Assets.xcassets */; };
 		00FB629E1D83167700E40F9D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629C1D83167700E40F9D /* MainMenu.xib */; };
+		00FB62A41D83193A00E40F9D /* SwiftTemplateLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00FB62A31D83192300E40F9D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				00FB62A41D83193A00E40F9D /* SwiftTemplateLauncher.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00FB62821D8314CD00E40F9D /* SwiftTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +110,7 @@
 				00FB627E1D8314CD00E40F9D /* Sources */,
 				00FB627F1D8314CD00E40F9D /* Frameworks */,
 				00FB62801D8314CD00E40F9D /* Resources */,
+				00FB62A31D83192300E40F9D /* CopyFiles */,
 			);
 			buildRules = (
 			);
