@@ -34,7 +34,7 @@ $ cd "$newProjectName"
 $ git mv SwiftTemplate "$newProjectName"
 $ git mv SwiftTemplateLauncher "$newProjectName"Launcher
 $ git mv SwiftTemplate.xcodeproj "$newProjectName".xcodeproj
-$ find README.md "$newProjectName" "$newProjectName"Launcher "$newProjectName".xcodeproj -path '*Assets.xcassets*' -prune -o -type f -print0 | xargs -0 sed -i '' 's/SwiftTemplate/$newProjectName/g'
+$ find README.md "$newProjectName" "$newProjectName"Launcher "$newProjectName".xcodeproj -path "*Assets.xcassets*" -prune -o -type f -print0 | xargs -0 sed -i "" "s/SwiftTemplate/$newProjectName/g"
 $ git add -A
 $ git commit -m "Renamed template project to "$newProjectName
 ```
