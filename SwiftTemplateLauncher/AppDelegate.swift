@@ -12,11 +12,50 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        DebugLog()
+        let running           = NSWorkspace.sharedWorkspace().runningApplications
+
+        var alreadyRunning    = false
+
+        for app in running {
+            if app.bundleIdentifier == Global.Bundle.identifier_main {
+                alreadyRunning = true
+                break
+            }
+        }
+
+        if !alreadyRunning {
+            NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector: "terminateApplication", name: "terminateLauncher", object: Global.Bundle.identifier_main)
+
+            let path = NSBundle.mainBundle().bundlePath as NSString
+
+            var components = path.pathComponents
+            components.removeLast()
+            components.removeLast()
+            components.removeLast()
+            components.append("MacOS")
+            components.append(Global.Bundle.name_main)
+
+            let newPath = NSString.pathWithComponents(components)
+            NSWorkspace.sharedWorkspace().launchApplication(newPath)
+        }
+        else {
+            NSApplication.sharedApplication().terminate(nil)
+        }
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        DebugLog()
+    }
+
+    func terminateApplication() {
+        DebugLog()
+        NSApplication.sharedApplication().terminate(nil)
+    }
+
+    private override init() {
+        DebugLog()
+        super.init()
     }
 
 

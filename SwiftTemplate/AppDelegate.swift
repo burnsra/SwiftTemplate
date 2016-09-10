@@ -12,11 +12,27 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        DebugLog()
+        var launchAtLogin = false
+
+        for app in NSWorkspace.sharedWorkspace().runningApplications {
+            if app.bundleIdentifier == Global.Bundle.identifier_launcher {
+                launchAtLogin = true
+            }
+        }
+
+        if launchAtLogin {
+            NSDistributedNotificationCenter.defaultCenter().postNotificationName("terminateLauncher", object: Global.Bundle.identifier_main)
+        }
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
+        DebugLog()
+    }
+
+    private override init() {
+        DebugLog()
+        super.init()
     }
 
 
