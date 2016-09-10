@@ -10,6 +10,7 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var preferencesController: PreferencesController!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         DebugLog()
@@ -33,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private override init() {
         DebugLog()
         super.init()
+        self.preferencesController = PreferencesController.sharedInstance
     }
 
 

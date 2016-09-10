@@ -19,6 +19,7 @@
 		00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */; };
 		00FB62B21D83202B00E40F9D /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */; };
 		00FB62B31D83202B00E40F9D /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB62B11D83202B00E40F9D /* PreferencesWindowController.xib */; };
+		00FB62B51D8321FC00E40F9D /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62B41D8321FC00E40F9D /* PreferencesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		00FB62B11D83202B00E40F9D /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
+		00FB62B41D8321FC00E40F9D /* PreferencesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		00FB62AF1D831E6100E40F9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				00FB62B41D8321FC00E40F9D /* PreferencesController.swift */,
 				00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */,
 				00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */,
 			);
@@ -265,6 +268,7 @@
 			files = (
 				00FB62861D8314CD00E40F9D /* AppDelegate.swift in Sources */,
 				00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */,
+				00FB62B51D8321FC00E40F9D /* PreferencesController.swift in Sources */,
 				00FB62B21D83202B00E40F9D /* PreferencesWindowController.swift in Sources */,
 				00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */,
 			);

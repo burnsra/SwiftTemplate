@@ -8,6 +8,8 @@
 
 import Cocoa
 
+let preferencesController = PreferencesController.sharedInstance
+
 class PreferencesWindowController: NSWindowController {
     static let sharedInstance = PreferencesWindowController()
 
@@ -15,6 +17,14 @@ class PreferencesWindowController: NSWindowController {
 
     @IBAction func launchAtLoginClicked(sender: NSButton) {
         DebugLog()
+        switch sender.state {
+        case NSOnState:
+            preferencesController.launchAtLogin = true
+        case NSOffState:
+            preferencesController.launchAtLogin = false
+        default:
+            preferencesController.launchAtLogin = false
+        }
     }
 
     override var windowNibName : String! {
@@ -33,6 +43,17 @@ class PreferencesWindowController: NSWindowController {
     override func windowDidLoad() {
         DebugLog()
         super.windowDidLoad()
+        populatePreferencesWindow()
+    }
+
+    func populatePreferencesWindow() {
+        DebugLog()
+        switch preferencesController.launchAtLogin {
+        case true:
+            launchAtLoginButton.state = NSOnState
+        case false:
+            launchAtLoginButton.state = NSOffState
+        }
     }
 
     func windowWillClose(notification: NSNotification) {
