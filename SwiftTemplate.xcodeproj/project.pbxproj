@@ -82,9 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				00FB62851D8314CD00E40F9D /* AppDelegate.swift */,
-				00FB62871D8314CD00E40F9D /* Assets.xcassets */,
-				00FB62891D8314CD00E40F9D /* MainMenu.xib */,
-				00FB628C1D8314CD00E40F9D /* Info.plist */,
+				00FB62A51D831A9F00E40F9D /* Resources */,
+				00FB62A61D831AA500E40F9D /* UI */,
 			);
 			path = SwiftTemplate;
 			sourceTree = "<group>";
@@ -93,11 +92,44 @@
 			isa = PBXGroup;
 			children = (
 				00FB62981D83167700E40F9D /* AppDelegate.swift */,
-				00FB629A1D83167700E40F9D /* Assets.xcassets */,
-				00FB629C1D83167700E40F9D /* MainMenu.xib */,
-				00FB629F1D83167700E40F9D /* Info.plist */,
+				00FB62A71D831AAB00E40F9D /* Resources */,
+				00FB62A81D831AB200E40F9D /* UI */,
 			);
 			path = SwiftTemplateLauncher;
+			sourceTree = "<group>";
+		};
+		00FB62A51D831A9F00E40F9D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00FB62871D8314CD00E40F9D /* Assets.xcassets */,
+				00FB628C1D8314CD00E40F9D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		00FB62A61D831AA500E40F9D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				00FB62891D8314CD00E40F9D /* MainMenu.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		00FB62A71D831AAB00E40F9D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				00FB629A1D83167700E40F9D /* Assets.xcassets */,
+				00FB629F1D83167700E40F9D /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		00FB62A81D831AB200E40F9D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				00FB629C1D83167700E40F9D /* MainMenu.xib */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
