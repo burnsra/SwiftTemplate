@@ -47,7 +47,7 @@ class StatusMenuController: NSObject {
         super.init()
         statusMenu.delegate = self
 
-        let icon = NSImage(named: NSImageNameIconViewTemplate)
+        let icon = NSImage(named: "StatusMenuIcon")
         icon?.template = true
 
         statusItem.image = icon
