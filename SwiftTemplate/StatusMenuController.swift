@@ -9,6 +9,8 @@
 import Cocoa
 
 class StatusMenuController: NSObject {
+    var preferencesWindowController = PreferencesWindowController.sharedInstance
+
     var item_about = NSMenuItem()
     var item_documentation = NSMenuItem()
     var item_preferences = NSMenuItem()
@@ -32,6 +34,7 @@ class StatusMenuController: NSObject {
 
     @IBAction func clickPreferences(sender: NSMenuItem) {
         DebugLog()
+        preferencesWindowController.showWindow(sender)
     }
 
     @IBAction func clickQuit(sender: NSMenuItem) {

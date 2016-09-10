@@ -17,6 +17,8 @@
 		00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
 		00FB62AC1D831C3900E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
 		00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */; };
+		00FB62B21D83202B00E40F9D /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */; };
+		00FB62B31D83202B00E40F9D /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB62B11D83202B00E40F9D /* PreferencesWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +47,8 @@
 		00FB629F1D83167700E40F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 		00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		00FB62B11D83202B00E40F9D /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				00FB62891D8314CD00E40F9D /* MainMenu.xib */,
+				00FB62B11D83202B00E40F9D /* PreferencesWindowController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		00FB62AF1D831E6100E40F9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				00FB62B01D83202B00E40F9D /* PreferencesWindowController.swift */,
 				00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */,
 			);
 			name = Controllers;
@@ -237,6 +243,7 @@
 			files = (
 				00FB62881D8314CD00E40F9D /* Assets.xcassets in Resources */,
 				00FB628B1D8314CD00E40F9D /* MainMenu.xib in Resources */,
+				00FB62B31D83202B00E40F9D /* PreferencesWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +265,7 @@
 			files = (
 				00FB62861D8314CD00E40F9D /* AppDelegate.swift in Sources */,
 				00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */,
+				00FB62B21D83202B00E40F9D /* PreferencesWindowController.swift in Sources */,
 				00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
