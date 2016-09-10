@@ -16,6 +16,7 @@
 		00FB62A41D83193A00E40F9D /* SwiftTemplateLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
 		00FB62AC1D831C3900E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
+		00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +44,7 @@
 		00FB629D1D83167700E40F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		00FB629F1D83167700E40F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
+		00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				00FB62851D8314CD00E40F9D /* AppDelegate.swift */,
+				00FB62AF1D831E6100E40F9D /* Controllers */,
 				00FB62AB1D831B5F00E40F9D /* Helpers */,
 				00FB62A51D831A9F00E40F9D /* Resources */,
 				00FB62A61D831AA500E40F9D /* UI */,
@@ -142,6 +145,14 @@
 				00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		00FB62AF1D831E6100E40F9D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				00FB62AD1D831E5C00E40F9D /* StatusMenuController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +258,7 @@
 			files = (
 				00FB62861D8314CD00E40F9D /* AppDelegate.swift in Sources */,
 				00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */,
+				00FB62AE1D831E5C00E40F9D /* StatusMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
