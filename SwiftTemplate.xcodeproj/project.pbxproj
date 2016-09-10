@@ -10,6 +10,9 @@
 		00FB62861D8314CD00E40F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62851D8314CD00E40F9D /* AppDelegate.swift */; };
 		00FB62881D8314CD00E40F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FB62871D8314CD00E40F9D /* Assets.xcassets */; };
 		00FB628B1D8314CD00E40F9D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB62891D8314CD00E40F9D /* MainMenu.xib */; };
+		00FB62991D83167700E40F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62981D83167700E40F9D /* AppDelegate.swift */; };
+		00FB629B1D83167700E40F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629A1D83167700E40F9D /* Assets.xcassets */; };
+		00FB629E1D83167700E40F9D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629C1D83167700E40F9D /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,10 +21,22 @@
 		00FB62871D8314CD00E40F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FB628A1D8314CD00E40F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		00FB628C1D8314CD00E40F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTemplateLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00FB62981D83167700E40F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00FB629A1D83167700E40F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00FB629D1D83167700E40F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		00FB629F1D83167700E40F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		00FB627F1D8314CD00E40F9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00FB62931D83167700E40F9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				00FB62841D8314CD00E40F9D /* SwiftTemplate */,
+				00FB62971D83167700E40F9D /* SwiftTemplateLauncher */,
 				00FB62831D8314CD00E40F9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				00FB62821D8314CD00E40F9D /* SwiftTemplate.app */,
+				00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +73,17 @@
 				00FB628C1D8314CD00E40F9D /* Info.plist */,
 			);
 			path = SwiftTemplate;
+			sourceTree = "<group>";
+		};
+		00FB62971D83167700E40F9D /* SwiftTemplateLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				00FB62981D83167700E40F9D /* AppDelegate.swift */,
+				00FB629A1D83167700E40F9D /* Assets.xcassets */,
+				00FB629C1D83167700E40F9D /* MainMenu.xib */,
+				00FB629F1D83167700E40F9D /* Info.plist */,
+			);
+			path = SwiftTemplateLauncher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +106,23 @@
 			productReference = 00FB62821D8314CD00E40F9D /* SwiftTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
+		00FB62951D83167700E40F9D /* SwiftTemplateLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00FB62A21D83167700E40F9D /* Build configuration list for PBXNativeTarget "SwiftTemplateLauncher" */;
+			buildPhases = (
+				00FB62921D83167700E40F9D /* Sources */,
+				00FB62931D83167700E40F9D /* Frameworks */,
+				00FB62941D83167700E40F9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftTemplateLauncher;
+			productName = SwiftTemplateLauncher;
+			productReference = 00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -89,6 +134,9 @@
 				ORGANIZATIONNAME = "Robert Burns";
 				TargetAttributes = {
 					00FB62811D8314CD00E40F9D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					00FB62951D83167700E40F9D = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -107,6 +155,7 @@
 			projectRoot = "";
 			targets = (
 				00FB62811D8314CD00E40F9D /* SwiftTemplate */,
+				00FB62951D83167700E40F9D /* SwiftTemplateLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +170,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00FB62941D83167700E40F9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00FB629B1D83167700E40F9D /* Assets.xcassets in Resources */,
+				00FB629E1D83167700E40F9D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -132,6 +190,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		00FB62921D83167700E40F9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00FB62991D83167700E40F9D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -139,6 +205,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				00FB628A1D8314CD00E40F9D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		00FB629C1D83167700E40F9D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00FB629D1D83167700E40F9D /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -252,6 +326,30 @@
 			};
 			name = Release;
 		};
+		00FB62A01D83167700E40F9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftTemplateLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.robertburns.osx.SwiftTemplateLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		00FB62A11D83167700E40F9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftTemplateLauncher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.robertburns.osx.SwiftTemplateLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -269,6 +367,15 @@
 			buildConfigurations = (
 				00FB62901D8314CD00E40F9D /* Debug */,
 				00FB62911D8314CD00E40F9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00FB62A21D83167700E40F9D /* Build configuration list for PBXNativeTarget "SwiftTemplateLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00FB62A01D83167700E40F9D /* Debug */,
+				00FB62A11D83167700E40F9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
