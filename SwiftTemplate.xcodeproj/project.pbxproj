@@ -14,6 +14,8 @@
 		00FB629B1D83167700E40F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629A1D83167700E40F9D /* Assets.xcassets */; };
 		00FB629E1D83167700E40F9D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00FB629C1D83167700E40F9D /* MainMenu.xib */; };
 		00FB62A41D83193A00E40F9D /* SwiftTemplateLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 00FB62961D83167700E40F9D /* SwiftTemplateLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
+		00FB62AC1D831C3900E40F9D /* GlobalHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +42,7 @@
 		00FB629A1D83167700E40F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00FB629D1D83167700E40F9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		00FB629F1D83167700E40F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				00FB62851D8314CD00E40F9D /* AppDelegate.swift */,
+				00FB62AB1D831B5F00E40F9D /* Helpers */,
 				00FB62A51D831A9F00E40F9D /* Resources */,
 				00FB62A61D831AA500E40F9D /* UI */,
 			);
@@ -130,6 +134,14 @@
 				00FB629C1D83167700E40F9D /* MainMenu.xib */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		00FB62AB1D831B5F00E40F9D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				00FB62A91D831B5A00E40F9D /* GlobalHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FB62861D8314CD00E40F9D /* AppDelegate.swift in Sources */,
+				00FB62AA1D831B5A00E40F9D /* GlobalHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00FB62991D83167700E40F9D /* AppDelegate.swift in Sources */,
+				00FB62AC1D831C3900E40F9D /* GlobalHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
