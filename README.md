@@ -2,7 +2,7 @@
 
 ## Overview
 
-**SwiftTemplate** is an MacOS application written in Swift.  This template application provides the following features:
+**SwiftTemplate** is a MacOS application written in Swift.  This template application provides the following features:
 
 - Status menu
 - About window
@@ -22,3 +22,11 @@ About Window
 Preferences Window
 
 <img style="max-width:75%;" src="./assets/preferences_window.png" />
+
+## Contributions
+
+Do you want to improve the app or add any useful features? Please go ahead and create pull requests. I'm thankful for any help.
+
+## License
+
+[MIT](https://github.com/burnsra/SwiftTemplate/blob/master/LICENSE) © Robert Burns
