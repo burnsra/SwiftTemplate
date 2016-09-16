@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         if !alreadyRunning {
-            NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector: "terminateApplication", name: "terminateLauncher", object: Global.Bundle.identifier_main)
+            NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.terminateApplication), name: "terminateLauncher", object: Global.Bundle.identifier_main)
 
             let path = NSBundle.mainBundle().bundlePath as NSString
 
