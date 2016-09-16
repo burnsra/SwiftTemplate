@@ -14,27 +14,27 @@ struct Global {
     static let url_github: String = "https://github.com/burnsra/" + Bundle.name_main
 
     struct Bundle {
-        static let build: String = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleVersion") as! String
-        static let identifier: String = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleIdentifier") as! String
-        static let name: String = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String
-        static let version: String = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
+        static let build: String = Foundation.Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
+        static let identifier: String = Foundation.Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier") as! String
+        static let name: String = Foundation.Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+        static let version: String = Foundation.Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
 
-        static let identifier_main: String = identifier.stringByReplacingOccurrencesOfString(txt_launcher, withString: "")
+        static let identifier_main: String = identifier.replacingOccurrences(of: txt_launcher, with: "")
         static let identifier_launcher: String = identifier_main + txt_launcher
 
-        static let name_main: String = name.stringByReplacingOccurrencesOfString(txt_launcher, withString: "")
+        static let name_main: String = name.replacingOccurrences(of: txt_launcher, with: "")
         static let name_launcher: String = name_main + txt_launcher
     }
 
 
 }
 
-public func DebugLog ( message: String = "",
+public func DebugLog ( _ message: String = "",
                        file: String = #file,
                        line: Int = #line,
                        method: String = #function) {
-    let lastPath: String = NSURL(fileURLWithPath: file).lastPathComponent ?? file
-    let fileName = lastPath.componentsSeparatedByString(".")[0]
-    let methodName = method.stringByReplacingOccurrencesOfString("()", withString: "")
+    let lastPath: String = URL(fileURLWithPath: file).lastPathComponent 
+    let fileName = lastPath.components(separatedBy: ".")[0]
+    let methodName = method.replacingOccurrences(of: "()", with: "")
     NSLog("\(fileName):\(line) \(methodName) \(message)")
 }

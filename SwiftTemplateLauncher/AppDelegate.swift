@@ -11,9 +11,9 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         DebugLog()
-        let running           = NSWorkspace.sharedWorkspace().runningApplications
+        let running           = NSWorkspace.shared().runningApplications
 
         var alreadyRunning    = false
 
@@ -25,9 +25,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
 
         if !alreadyRunning {
-            NSDistributedNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.terminateApplication), name: "terminateLauncher", object: Global.Bundle.identifier_main)
+            DistributedNotificationCenter.default().addObserver(forName: NSNotification.Name("terminateLauncher"), object: nil, queue: OperationQueue.main) { _ in
+                self.terminateApplication()
+            }
 
-            let path = NSBundle.mainBundle().bundlePath as NSString
+            let path = Bundle.main.bundlePath as NSString
 
             var components = path.pathComponents
             components.removeLast()
@@ -36,24 +38,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             components.append("MacOS")
             components.append(Global.Bundle.name_main)
 
-            let newPath = NSString.pathWithComponents(components)
-            NSWorkspace.sharedWorkspace().launchApplication(newPath)
+            let newPath = NSString.path(withComponents: components)
+            NSWorkspace.shared().launchApplication(newPath)
         }
         else {
-            NSApplication.sharedApplication().terminate(nil)
+            NSApplication.shared().terminate(nil)
         }
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         DebugLog()
     }
 
     func terminateApplication() {
         DebugLog()
-        NSApplication.sharedApplication().terminate(nil)
+        NSApplication.shared().terminate(nil)
     }
 
-    private override init() {
+    fileprivate override init() {
         DebugLog()
         super.init()
     }

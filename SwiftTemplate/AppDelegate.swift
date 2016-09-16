@@ -12,26 +12,26 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     var preferencesController: PreferencesController!
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         DebugLog()
         var launchAtLogin = false
 
-        for app in NSWorkspace.sharedWorkspace().runningApplications {
+        for app in NSWorkspace.shared().runningApplications {
             if app.bundleIdentifier == Global.Bundle.identifier_launcher {
                 launchAtLogin = true
             }
         }
 
         if launchAtLogin {
-            NSDistributedNotificationCenter.defaultCenter().postNotificationName("terminateLauncher", object: Global.Bundle.identifier_main)
+            DistributedNotificationCenter.default().post(name: NSNotification.Name("terminateLauncher"), object: Global.Bundle.identifier_main)
         }
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         DebugLog()
     }
 
-    private override init() {
+    fileprivate override init() {
         DebugLog()
         super.init()
         self.preferencesController = PreferencesController.sharedInstance

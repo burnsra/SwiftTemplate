@@ -12,26 +12,26 @@ import ServiceManagement
 class PreferencesController {
     static let sharedInstance = PreferencesController()
 
-    private let launchAtLoginKey = "launchAtLogin"
-    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    fileprivate let launchAtLoginKey = "launchAtLogin"
+    fileprivate let userDefaults = UserDefaults.standard
 
     var launchAtLogin: Bool {
         set (newlaunchAtLogin) {
-            userDefaults.setObject(newlaunchAtLogin, forKey: launchAtLoginKey)
-            SMLoginItemSetEnabled(Global.Bundle.identifier_launcher, newlaunchAtLogin)
+            userDefaults.set(newlaunchAtLogin, forKey: launchAtLoginKey)
+            SMLoginItemSetEnabled(Global.Bundle.identifier_launcher as CFString, newlaunchAtLogin)
         }
         get {
-            return userDefaults.objectForKey(launchAtLoginKey) as! Bool
+            return userDefaults.object(forKey: launchAtLoginKey) as! Bool
         }
     }
 
     func registerDefaultPreferences() {
         DebugLog()
         let defaults = [ launchAtLoginKey : false ]
-        userDefaults.registerDefaults(defaults)
+        userDefaults.register(defaults: defaults)
     }
 
-    private init() {
+    fileprivate init() {
         DebugLog()
         self.registerDefaultPreferences()
     }

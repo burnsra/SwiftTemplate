@@ -17,38 +17,38 @@ class StatusMenuController: NSObject {
     var item_quit = NSMenuItem()
     var statusMenu = NSMenu()
 
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
 
-    @IBAction func clickAbout(sender: NSMenuItem) {
+    @IBAction func clickAbout(_ sender: NSMenuItem) {
         DebugLog()
-        NSApplication.sharedApplication().orderFrontStandardAboutPanel(sender)
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.shared().orderFrontStandardAboutPanel(sender)
+        NSApplication.shared().activate(ignoringOtherApps: true)
     }
 
-    @IBAction func clickDocumentation(sender: NSMenuItem) {
+    @IBAction func clickDocumentation(_ sender: NSMenuItem) {
         DebugLog()
-        if let url: NSURL = NSURL(string: Global.url_github) {
-            NSWorkspace.sharedWorkspace().openURL(url)
+        if let url: URL = URL(string: Global.url_github) {
+            NSWorkspace.shared().open(url)
         }
     }
 
-    @IBAction func clickPreferences(sender: NSMenuItem) {
+    @IBAction func clickPreferences(_ sender: NSMenuItem) {
         DebugLog()
         preferencesWindowController.showWindow(sender)
     }
 
-    @IBAction func clickQuit(sender: NSMenuItem) {
+    @IBAction func clickQuit(_ sender: NSMenuItem) {
         DebugLog()
-        NSApplication.sharedApplication().terminate(sender)
+        NSApplication.shared().terminate(sender)
     }
 
-    private override init() {
+    fileprivate override init() {
         DebugLog()
         super.init()
         statusMenu.delegate = self
 
         let icon = NSImage(named: "StatusMenuIcon")
-        icon?.template = true
+        icon?.isTemplate = true
 
         statusItem.image = icon
         statusItem.menu = statusMenu
@@ -71,10 +71,10 @@ class StatusMenuController: NSObject {
         item_quit.title = "Quit"
 
         statusMenu.addItem(item_preferences)
-        statusMenu.addItem(NSMenuItem.separatorItem())
+        statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(item_about)
         statusMenu.addItem(item_documentation)
-        statusMenu.addItem(NSMenuItem.separatorItem())
+        statusMenu.addItem(NSMenuItem.separator())
         statusMenu.addItem(item_quit)
     }
 
@@ -82,11 +82,11 @@ class StatusMenuController: NSObject {
 }
 
 extension StatusMenuController: NSMenuDelegate {
-    func menuWillOpen(menu: NSMenu) {
+    func menuWillOpen(_ menu: NSMenu) {
         DebugLog()
     }
 
-    func menuDidClose(menu: NSMenu) {
+    func menuDidClose(_ menu: NSMenu) {
         DebugLog()
     }
 

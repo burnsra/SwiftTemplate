@@ -15,7 +15,7 @@ class PreferencesWindowController: NSWindowController {
 
     @IBOutlet weak var launchAtLoginButton: NSButton!
 
-    @IBAction func launchAtLoginClicked(sender: NSButton) {
+    @IBAction func launchAtLoginClicked(_ sender: NSButton) {
         DebugLog()
         switch sender.state {
         case NSOnState:
@@ -28,16 +28,16 @@ class PreferencesWindowController: NSWindowController {
     }
 
     override var windowNibName : String! {
-        return "\(self.dynamicType)"
+        return "\(type(of: self))"
     }
 
-    override func showWindow(sender: AnyObject?) {
+    override func showWindow(_ sender: Any?) {
         DebugLog()
         super.showWindow(sender)
         self.window?.center()
         self.window?.orderFront(self)
         self.window?.title = "\(Global.Bundle.name_main) Preferences"
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.shared().activate(ignoringOtherApps: true)
     }
 
     override func windowDidLoad() {
@@ -56,7 +56,7 @@ class PreferencesWindowController: NSWindowController {
         }
     }
 
-    func windowWillClose(notification: NSNotification) {
+    func windowWillClose(_ notification: Notification) {
         DebugLog()
     }
 
