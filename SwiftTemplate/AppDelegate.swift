@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DebugLog()
         var launchAtLogin = false
 
-        for app in NSWorkspace.shared().runningApplications {
+        for app in NSWorkspace.shared.runningApplications {
             if app.bundleIdentifier == Global.Bundle.identifier_launcher {
                 launchAtLogin = true
             }

@@ -13,7 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         DebugLog()
-        let running           = NSWorkspace.shared().runningApplications
+        let running           = NSWorkspace.shared.runningApplications
 
         var alreadyRunning    = false
 
@@ -39,10 +39,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             components.append(Global.Bundle.name_main)
 
             let newPath = NSString.path(withComponents: components)
-            NSWorkspace.shared().launchApplication(newPath)
+            NSWorkspace.shared.launchApplication(newPath)
         }
         else {
-            NSApplication.shared().terminate(nil)
+            NSApplication.shared.terminate(nil)
         }
     }
 
@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func terminateApplication() {
         DebugLog()
-        NSApplication.shared().terminate(nil)
+        NSApplication.shared.terminate(nil)
     }
 
     fileprivate override init() {

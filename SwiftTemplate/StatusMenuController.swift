@@ -17,18 +17,18 @@ class StatusMenuController: NSObject {
     var item_quit = NSMenuItem()
     var statusMenu = NSMenu()
 
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
 
     @IBAction func clickAbout(_ sender: NSMenuItem) {
         DebugLog()
-        NSApplication.shared().orderFrontStandardAboutPanel(sender)
-        NSApplication.shared().activate(ignoringOtherApps: true)
+        NSApplication.shared.orderFrontStandardAboutPanel(sender)
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
     @IBAction func clickDocumentation(_ sender: NSMenuItem) {
         DebugLog()
         if let url: URL = URL(string: Global.url_github) {
-            NSWorkspace.shared().open(url)
+            NSWorkspace.shared.open(url)
         }
     }
 
@@ -39,7 +39,7 @@ class StatusMenuController: NSObject {
 
     @IBAction func clickQuit(_ sender: NSMenuItem) {
         DebugLog()
-        NSApplication.shared().terminate(sender)
+        NSApplication.shared.terminate(sender)
     }
 
     fileprivate override init() {

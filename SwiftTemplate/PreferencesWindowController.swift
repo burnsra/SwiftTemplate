@@ -18,9 +18,9 @@ class PreferencesWindowController: NSWindowController {
     @IBAction func launchAtLoginClicked(_ sender: NSButton) {
         DebugLog()
         switch sender.state {
-        case NSOnState:
+        case NSControl.StateValue.on:
             preferencesController.launchAtLogin = true
-        case NSOffState:
+        case NSControl.StateValue.off:
             preferencesController.launchAtLogin = false
         default:
             preferencesController.launchAtLogin = false
@@ -37,7 +37,7 @@ class PreferencesWindowController: NSWindowController {
         self.window?.center()
         self.window?.orderFront(self)
         self.window?.title = "\(Global.Bundle.name_main) Preferences"
-        NSApplication.shared().activate(ignoringOtherApps: true)
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
     override func windowDidLoad() {
@@ -50,9 +50,9 @@ class PreferencesWindowController: NSWindowController {
         DebugLog()
         switch preferencesController.launchAtLogin {
         case true:
-            launchAtLoginButton.state = NSOnState
+            launchAtLoginButton.state = NSControl.StateValue.on
         case false:
-            launchAtLoginButton.state = NSOffState
+            launchAtLoginButton.state = NSControl.StateValue.off
         }
     }
 
